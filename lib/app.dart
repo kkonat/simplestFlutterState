@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-final appState = AppState();
+final appState = AppState(); // Create a global instance of AppState
 
 const appName = "Simplest statemgmt";
 
@@ -50,10 +50,9 @@ class _AppState extends State<App> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: AppPage(
-          appState: appState,
           key: null,
         ),
       ),
