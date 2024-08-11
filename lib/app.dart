@@ -44,18 +44,10 @@ class _AppState extends State<App> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.inactive) {
-      appState.saveState(); // Save state when the app is paused
+      appState.saveState();
     }
   }
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: AppPage(
-          key: null,
-        ),
-      ),
-    );
-  }
+  Widget build(BuildContext context) => const MaterialApp(home: Scaffold(body: AppPage(key: null)));
 }

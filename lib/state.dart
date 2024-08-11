@@ -27,11 +27,7 @@ class AppState {
   }
 
   Future<String> getTime() async {
-    try {
-      var now = await NTP.now();
-      return now.toString().split('.')[0];
-    } catch (e) {
-      rethrow;
-    }
+    var now = await NTP.now();
+    return now.toString().split('.')[0];
   }
 }
