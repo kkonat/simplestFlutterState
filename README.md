@@ -6,3 +6,5 @@ No bloc.
 App state held in singleton.
 Saved/loaded to/from shared preferences on App start/end.
 Periodically updates (NTP time)
+
+see also stream-version branch where timer generates a stream
